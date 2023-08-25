@@ -126,7 +126,9 @@ function convertQrCode( e ) {
 
     let nameFile = userFile.name.split( '.' )
 
-    if ( nameFile[ nameFile.length - 1 ] == 'svg' ) {
+    if ( nameFile[ nameFile.length - 1 ] != 'png' 
+        || nameFile[ nameFile.length - 1 ] != 'jpeg'
+        || nameFile[ nameFile.length - 1 ] != 'jpg' ) {
         qrConvertBtn.innerText = 'Not allowed'
         return;
     }
