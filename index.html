@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- API https://goqr.me/ -->
+    <title> QR CraftScan </title>
+</head>
+<body>
+    
+    <div class="qr-wrapper-generator">
+        <div class="qr-generator-form">
+
+            <header class="qr-header">
+                <h1 class="qr-title"> QR CraftScan </h1>
+                <div class="show-btns">
+                    <button id="showGenerateBtn" class="qr-btn"> Generate </button>
+                    <button id="showConvertBtn" class="qr-btn"> Convert </button>
+                </div>
+            </header>
+    
+            <form class="qr-form qr-generate-form" style="display: none;">
+
+                <p class="qr-desc"> Paste a url or enter text to create QR code </p>
+
+                <label class="info-label" for="Text"> Insert Text </label>
+                <input class="qr-input-text qr-generator-input" type="text" spellcheck="false" placeholder="Enter text or url">
+    
+                <label class="info-label" for="Color"> Choose color </label>
+                <input class="qr-input-color qr-generator-input color-input" type="color" value="#000000" spellcheck="false">
+    
+                <label class="info-label" for="Color"> Choose background </label>
+                <input class="qr-input-bg qr-generator-input color-input" type="color" value="#ffffff" spellcheck="false">
+    
+                <label class="info-label" for="Format"> Choose format </label>
+
+                <link rel="stylesheet" href="custom-select.css">
+                <div class="custom-select">
+                    <select class="qr-code-format qr-select-format" name="format">
+                        <option value="png" selected> png </option>
+                        <option value="jpg"> jpg </option>
+                        <option value="jpeg"> jpeg </option>
+                        <option value="svg"> svg </option>
+                    </select>
+                </div>
+                <script src="./custom-select.js"></script>
+    
+                <button class="qr-generate-btn qr-btn"> Generate QR Code </button>
+
+            </form>
+
+            <div class="qr-code">
+                <img class="qr-img" src="" alt="qr-code">
+                <button class="download-btn qr-btn"> Download QR </button>
+            </div>                
+
+            <div class="qr-wrapper-converter qr-convert-form" style="display: none;">
+                <form class="qr-form">
+
+                    <p class="qr-desc"> Upload QR Code to Read ( permitted formats: png, jpg, jpeg ) </p>
+                    <label class="info-label" for="file"> 
+                        Import QR
+                        <i class="uil uil-upload"></i>
+                    </label>
+                    <input class="qr-input-converter qr-generator-input" type="file">
+        
+                    <button class="qr-convert-btn qr-btn"> Convert QR Code </button>
+                </form>
+        
+                <div class="details">
+                    <textarea class="qr-result-area" spellcheck="false" disabled></textarea>
+                    <div class="show-btns">
+                        <button class="qr-copy-result-btn qr-btn">Copy Text</button>
+                        <button class="qr-save-result-btn qr-btn"> Save result in txt file </button>
+                    </div>
+                </div>
+            </div>            
+
+            <div class="drops">
+                <div class="drop drop-1 floating"></div>
+                <div class="drop drop-2 floating"></div>
+                <div class="drop drop-3 floating"></div>
+                <div class="drop drop-4 floating"></div>
+                <div class="drop drop-5 floating"></div>
+            </div>            
+
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
