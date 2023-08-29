@@ -8,10 +8,12 @@ const qrConvertForm = document.querySelector( '.qr-convert-form' );
 showGenerateBtn.addEventListener( 'click', ( e ) => {
     qrConvertForm.style.display = 'none';
     qrGenerateForm.removeAttribute( 'style' );
+    document.querySelector( '.qr-wrapper-generator' ).style.height = '100vh';
 } );
 showConvertBtn.addEventListener( 'click', ( e ) => {
     qrGenerateForm.style.display = 'none';
     qrConvertForm.removeAttribute( 'style' );
+    document.querySelector( '.qr-wrapper-generator' ).style.height = '100vh';
 } );
 
 
@@ -54,6 +56,7 @@ function generateQrCode( e ) {
 
     showBtns.style.display = 'none';
     qrGenerateForm.style.display = 'none';
+    qrWrapperGenerator.removeAttribute( 'style' );
 };
 
 function imgLoad() {
@@ -96,6 +99,7 @@ function downloadQrCode() {
 
     showBtns.removeAttribute( 'style' );
     qrGenerateForm.removeAttribute( 'style' );
+    qrWrapperGenerator.style.height = '100vh';
 };
 
 

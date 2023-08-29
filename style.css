@@ -263,7 +263,7 @@ textarea {
 	.qr-wrapper-generator {
         margin-block: 0rem;
         width: 100%;
-        height: 100vh;
+        /* height: 100vh; */
     }
 
     .qr-generator-form {
